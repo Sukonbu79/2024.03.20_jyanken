@@ -39,31 +39,31 @@ h2 {
 
 @keyframes change {
   0% {
-    background-image: url(img/janken_gu.png);
+    background-image: url(janken_gu.png);
     background-size: cover;
   }
   50% {
-    background-image: url(img/janken_choki.png);
+    background-image: url(janken_choki.png);
     background-size: cover;
   }
   100% {
-    background-image: url(img/janken_pa.png);
+    background-image: url(janken_pa.png);
     background-size: cover;
   }
 }
 
 .gu {
-  background-image: url(img/janken_gu.png);
+  background-image: url(janken_gu.png);
   background-size: cover;
 }
 
 .choki {
-  background-image: url(img/janken_choki.png);
+  background-image: url(janken_choki.png);
   background-size: cover;
 }
 
 .pa {
-  background-image: url(img/janken_pa.png);
+  background-image: url(janken_pa.png);
   background-size: cover;
 }
 
