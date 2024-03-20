@@ -293,7 +293,7 @@ button {
   width: 220px;
   height: 80px;
   font-size: 24px;
-  margin: 24px auto;
+  margin: 24px auto 8px;
   display: block;
   border: none;
 }
