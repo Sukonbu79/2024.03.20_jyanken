@@ -3,9 +3,10 @@
 {
   // imgArea
   const imageArea = document.querySelector("#image-area");
-  // imgBox
+  // imgBoxrelative
   const imageBox = document.querySelector("#image-box");
   // spans
+  const erabe = document.querySelector("#erabe");
   const zawa = document.querySelector("#zawa");
   const zawazawa = document.querySelector("#zawazawa");
   const youbun = document.querySelector("#youbun");
@@ -59,6 +60,7 @@
 
   // zawa-remove.hide
   let zawaRemove = () => {
+    erabe.classList.add("hide");
     zawa.classList.remove("hide");
     zawazawa.classList.remove("hide");
     youbun.classList.remove("hide");
@@ -98,6 +100,7 @@
     resetLose.classList.add("hide");
     resetEven.classList.add("hide");
     // zawa-reset
+    erabe.classList.remove("hide");
     zawa.classList.add("hide");
     zawazawa.classList.add("hide");
     youbun.classList.add("hide");
