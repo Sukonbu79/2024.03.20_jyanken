@@ -1,51 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>じゃんけん...ざわ...</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <main class="jyanken">
-    <h2>じゃんけん...<br>ざわ...</h2>
-    <!-- image-area -->
-    <!-- image -->
-    <div id="image-area" class="animation">
-<img src="janken_gu.png" alt="ぐー" width="240" height="240" class="hide">
-      <img src="janken_choki.png" alt="ちょき" width="240" height="240" class="hide">
-<img src="janken_pa.png" alt="ぱー" width="240" height="240" class="hide">
-      <!-- span -->
-<span id="zawa" class="hide">ざわ...</span>
-<span id="zawazawa" class="hide">ざわ..ざわ...</span>
-<span id="youbun" class="hide">勝たなきゃ誰かの養分...</span>
-<span id="jibun" class="hide">自分を救うのは...<br>自分だけっ...！</span>
-<!-- result -->
-<span id="lose" class="hide"><span class="result">Lose...</span><br>この結果は言うなら必然、これまでのオレの人生のツケ...！</span>
-<span id="win" class="hide"><span class="result">Win!</span><br>キンッキンに冷えてやがる！あ...ありがてぇっ...！</span>
-<span id="even" class="hide">あいこ...だと...っ!?</span>
-    </div>
-    <!-- button-area -->
-    <div class="button-area">
-      <button id="gu">グーだ！</button>
-      <button id="choki">いや...チョキだ！</button>
-      <button id="pa">パーでいく！</button>
-      <button id="reset-lose" class="hide">まだ...<br>終わってないっ！<br>ここを...押せっ！！</button>
-      <button id="reset-win" class="hide">勝ち逃げが許されると<br>思ってるのか...？<br>ここを...押せっ！！</button>
-      <button id="reset-even" class="hide">まだだ...っ！！<br>ここを...押せっ！！</button>
-    </div>
-    <div class="counter">
-      <p><span id="win-count">0</span>勝：<span id="lose-count">0</span>敗：<span id="even-count">0</span>分け</p>
-    </div>
-    <!-- clear-button -->
-      <button id="clear">すべて...<br>無に返す！</button>
-    <!-- footer -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>じゃんけん...ざわ...</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="jyanken">
+      <h2>じゃんけん...<br />ざわ...</h2>
+      <!-- image-area -->
+      <!-- image -->
+      <div id="image-area">
+        <div id="image-box" class="animation">
+          <img
+            src="img/janken_gu.png"
+            alt="ぐー"
+            width="240"
+            height="240"
+            class="hide"
+          />
+          <img
+            src="img/janken_choki.png"
+            alt="ちょき"
+            width="240"
+            height="240"
+            class="hide"
+          />
+          <img
+            src="img/janken_pa.png"
+            alt="ぱー"
+            width="240"
+            height="240"
+            class="hide"
+          />
+        </div>
+        <!-- span -->
+        <span id="zawa" class="hide">ざわ...</span>
+        <span id="zawazawa" class="hide">ざわ..ざわ...</span>
+        <span id="youbun" class="hide">勝たなきゃ誰かの養分...</span>
+        <span id="jibun" class="hide"
+          >自分を救うのは...<br />自分だけっ...！</span
+        >
+        <!-- result -->
+        <span id="lose" class="hide">
+          <span id="gunya">ぐにゃり...</span><br />
+          <span class="result">Lose...</span
+          ><br />この結果は言うなら必然、これまでのオレの人生のツケ...！</span
+        >
+        <span id="win" class="hide"
+          ><span class="result">Win!</span
+          ><br />キンッキンに冷えてやがる！あ...ありがてぇっ...！</span
+        >
+        <span id="even" class="hide">あいこ...だと...っ!?</span>
+      </div>
+      <!-- button-area -->
+      <div class="button-area">
+        <button id="gu">グーだ！</button>
+        <button id="choki">いや...チョキだ！</button>
+        <button id="pa">パーでいく！</button>
+        <button id="reset-lose" class="hide">
+          まだ...<br />終わってないっ！<br />...次だっ！！
+        </button>
+        <button id="reset-win" class="hide">
+          勝ち逃げが許されると<br />思ってるのか...？<br />次だ...押せっ！！
+        </button>
+        <button id="reset-even" class="hide">
+          まだだ...っ！！<br />ここを...押せっ！！
+        </button>
+      </div>
+      <div class="counter">
+        <p>
+          <span id="win-count">0</span>勝：<span id="lose-count">0</span
+          >敗：<span id="even-count">0</span>分け
+        </p>
+      </div>
+      <!-- clear-button -->
+      <button id="clear">すべて...っ<br />「0」からだ！</button>
+      <!-- footer -->
       <footer>
         <small>スペシャルサンクス<br />福◯伸行様</small>
       </footer>
-  </main>
-  
-<script src="main.js"></script>
-</body>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
 </html>
