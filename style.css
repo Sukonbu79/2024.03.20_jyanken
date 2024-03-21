@@ -19,6 +19,7 @@ h2 {
   font-size: 36px;
   text-align: center;
   background-color: #eee;
+  user-select: none;
 }
 
 .hide {
@@ -313,6 +314,7 @@ button {
   font-size: 24px;
   padding: 8px 0;
   margin-top: 16px;
+  user-select: none;
 }
 
 /* clear-botton */
@@ -323,10 +325,12 @@ button {
   margin: 24px auto 8px;
   display: block;
   border: none;
+  user-select: none;
 }
 
 /* footer */
 footer {
   text-align: center;
   margin-top: 16px;
+  user-select: none;
 }
