@@ -219,12 +219,19 @@
 
   // clear-counter
   clear.addEventListener("click", () => {
-    localStorage.removeItem("winCount");
-    localStorage.removeItem("loseCount");
-    localStorage.removeItem("evenCount");
-    winCount.textContent = "0";
-    loseCount.textContent = "0";
-    evenCount.textContent = "0";
-    reset();
+    // clear-confirm
+    let clearConfirm = confirm("勝敗数が0になるんだぞ！？本当にいいのか？？");
+    if (clearConfirm) {
+      localStorage.removeItem("winCount");
+      localStorage.removeItem("loseCount");
+      localStorage.removeItem("evenCount");
+      winCount.textContent = "0";
+      loseCount.textContent = "0";
+      evenCount.textContent = "0";
+      reset();
+      alert("さあ、0から始めよう...");
+    } else {
+      alert("そうだ、まだ...いけるっ！");
+    }
   });
 }
