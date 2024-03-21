@@ -2,7 +2,9 @@
 
 {
   // imgArea
-  const imageAarea = document.querySelector("#image-area");
+  const imageArea = document.querySelector("#image-area");
+  // imgBox
+  const imageBox = document.querySelector("#image-box");
   // spans
   const zawa = document.querySelector("#zawa");
   const zawazawa = document.querySelector("#zawazawa");
@@ -76,10 +78,11 @@
   // reset
   let reset = () => {
     // image-reset
-    imageAarea.classList.add("animation");
-    imageAarea.classList.remove("gu");
-    imageAarea.classList.remove("choki");
-    imageAarea.classList.remove("pa");
+    imageBox.classList.add("animation");
+    imageBox.classList.remove("gu");
+    imageBox.classList.remove("choki");
+    imageBox.classList.remove("pa");
+    imageBox.classList.remove("skew");
     // button-reset
     gu.disabled = false;
     choki.disabled = false;
@@ -107,24 +110,24 @@
     zawaRemove();
     selectDisabled();
     setTimeout(() => {
-      imageAarea.classList.remove("animation");
+      imageBox.classList.remove("animation");
       switch (result) {
         case 1:
-          imageAarea.classList.add("choki");
+          imageBox.classList.add("choki");
           win.classList.remove("hide");
           resetWin.classList.remove("hide");
           winCount.textContent = Number(winCount.textContent) + 1;
           save();
           break;
         case 2:
-          imageAarea.classList.add("pa");
+          imageBox.classList.add("pa", "skew");
           lose.classList.remove("hide");
           resetLose.classList.remove("hide");
           loseCount.textContent = Number(loseCount.textContent) + 1;
           save();
           break;
         case 3:
-          imageAarea.classList.add("gu");
+          imageBox.classList.add("gu");
           resetEven.classList.remove("hide");
           even.classList.remove("hide");
           evenCount.textContent = Number(evenCount.textContent) + 1;
@@ -140,24 +143,24 @@
     zawaRemove();
     selectDisabled();
     setTimeout(() => {
-      imageAarea.classList.remove("animation");
+      imageBox.classList.remove("animation");
       switch (result) {
         case 1:
-          imageAarea.classList.add("pa");
+          imageBox.classList.add("pa");
           win.classList.remove("hide");
           resetWin.classList.remove("hide");
           winCount.textContent = Number(winCount.textContent) + 1;
           save();
           break;
         case 2:
-          imageAarea.classList.add("gu");
+          imageBox.classList.add("gu", "skew");
           lose.classList.remove("hide");
           resetLose.classList.remove("hide");
           loseCount.textContent = Number(loseCount.textContent) + 1;
           save();
           break;
         case 3:
-          imageAarea.classList.add("choki");
+          imageBox.classList.add("choki");
           resetEven.classList.remove("hide");
           even.classList.remove("hide");
           evenCount.textContent = Number(evenCount.textContent) + 1;
@@ -173,24 +176,24 @@
     zawaRemove();
     selectDisabled();
     setTimeout(() => {
-      imageAarea.classList.remove("animation");
+      imageBox.classList.remove("animation");
       switch (result) {
         case 1:
-          imageAarea.classList.add("gu");
+          imageBox.classList.add("gu");
           win.classList.remove("hide");
           resetWin.classList.remove("hide");
           winCount.textContent = Number(winCount.textContent) + 1;
           save();
           break;
         case 2:
-          imageAarea.classList.add("choki");
+          imageBox.classList.add("choki", "skew");
           lose.classList.remove("hide");
           resetLose.classList.remove("hide");
           loseCount.textContent = Number(loseCount.textContent) + 1;
           save();
           break;
         case 3:
-          imageAarea.classList.add("pa");
+          imageBox.classList.add("pa");
           resetEven.classList.remove("hide");
           even.classList.remove("hide");
           evenCount.textContent = Number(evenCount.textContent) + 1;
@@ -211,15 +214,14 @@
     reset();
   });
 
-
   // clear-counter
   clear.addEventListener("click", () => {
     localStorage.removeItem("winCount");
     localStorage.removeItem("loseCount");
     localStorage.removeItem("evenCount");
-    winCount.textContent = '0';
-    loseCount.textContent = '0';
-    evenCount.textContent = '0';
+    winCount.textContent = "0";
+    loseCount.textContent = "0";
+    evenCount.textContent = "0";
     reset();
   });
 }
